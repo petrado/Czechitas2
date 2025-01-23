@@ -10,6 +10,72 @@ namespace NewCzechitas
     {
         static void Main(string[] args)
         {
+            TimeWorking(); // select some text, right click - quick actions and refactoring - create method and keep everything in this method
+
+            /*int firstNumber;
+            TryCatch(out firstNumber);
+            */
+
+            double num1 = 10; // dopuble gives infinity
+            double num2 = 0;
+            Console.WriteLine($"Divvision result: {num1 / num2}");
+            SafeDivision divide = new SafeDivision();
+            try
+            {
+                divide.DivideNumbers(num1, num2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                Console.ReadLine();
+            }
+            
+
+
+
+
+
+
+
+            Console.ReadLine();
+        }
+
+        private static void TryCatch(out int firstNumber)
+        {
+            firstNumber = 0;
+
+            // user writes two integeres and want to divide
+            Console.WriteLine("Insert first number");
+            try
+            {
+                firstNumber = Int32.Parse(Console.ReadLine());
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Incorrect input");
+                Console.WriteLine(e.Message);
+                return;
+            }
+
+            Console.WriteLine("Insert second number");
+            int secondNumber = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Result after division is {firstNumber / secondNumber}");
+        }
+
+
+        private static void TimeWorking()
+        {
             // trida Rytir, 2 vlastnosti, 1 metoda
             // jmeno, pocetZivotu
             // metoda - vypis jmeno a zivoty
@@ -33,9 +99,6 @@ namespace NewCzechitas
             DateTime dateStart = new DateTime(2025, 5, 16);
             DateTime dateEnd = new DateTime(2025, 5, 28);
             Vacation Japon = new Vacation(dateStart, dateEnd, dateNow);
-
-
-            Console.ReadLine();
         }
     }
 }
