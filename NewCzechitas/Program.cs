@@ -10,11 +10,11 @@ namespace NewCzechitas
     {
         static void Main(string[] args)
         {
-            TimeWorking(); // select some text, right click - quick actions and refactoring - create method and keep everything in this method
+            // TimeWorking(); // select some text, right click - quick actions and refactoring - create method and keep everything in this method
 
-            /*int firstNumber;
-            TryCatch(out firstNumber);
-            */
+            // int firstNumber;
+            // TryCatch(out firstNumber);
+            
 
             double num1 = 10; // dopuble gives infinity
             double num2 = 0;
