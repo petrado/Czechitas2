@@ -44,7 +44,7 @@ namespace Czechitas3
             //    input = Console.ReadLine();
             //}
 
-            Console.WriteLine(string.Concat("hi"," ", "there"));
+            Console.WriteLine(string.Concat("hi", " ", "there"));
             // Equals - same as logical operator
             // StringComparision
 
@@ -76,7 +76,7 @@ namespace Czechitas3
             Console.WriteLine(reversed);
 
             //ukol - funkce umi detekovat, zda se jedna o palindrom, vypis jen palindromy
-            string[] words = new string[] {"kajak", "program", "rotor", "Czechitas", "madam", "Jarda", "radar", "nepotopen" };
+            string[] words = new string[] { "kajak", "program", "rotor", "Czechitas", "madam", "Jarda", "radar", "nepotopen" };
 
             List<string> resultPalindroms = new List<string>();
             resultPalindroms = GetPalindrom(words);
@@ -92,12 +92,27 @@ namespace Czechitas3
             //ukol - rozsifruj tuto zpravu - kazde pismeno je posunute o jedno doprava a -> b
             string cipher = "Wzcpsob!qsbdf!.!hsbuvmkj!b!ktfn!ob!Ufcf!qztoz";
             string resultCipher = CaesarCipher(cipher);
-            
 
+            string longText = "Hi Josef, how are you?";
+            bool containsJosef = longText.Contains("Josef");
+            int indexJosef = longText.IndexOf("Josef");
+            Console.WriteLine($"Text contains word Josef {containsJosef} on the position number {indexJosef}");
+            string firtsTenChar = longText.Substring(startIndex: 0, length: 12);
+            Console.WriteLine(firtsTenChar);
 
+            string otherName = longText.Replace("Josef", "Michal");
+            Console.Write(otherName);
 
+            Console.WriteLine("Insert name");
+            string inputName = Console.ReadLine();
+            string inputTrimmed = inputName.Trim(); //TrimStart, TrimEnd, Trim(' ', '-')
+            Console.WriteLine($"Name inserted [{inputName}] and name after Trim [{inputTrimmed}]");
 
-
+            string[] jidla = { "rizek", "kedlubna", "caj"};
+            for (int i = 0; i < jidla.Length; i++)
+            {
+                Console.WriteLine(jidla[i].PadRight(20, '.'));
+            }
 
 
 
@@ -107,23 +122,6 @@ namespace Czechitas3
             Console.ReadLine();
         }
 
-        public static string CaesarCipher(string text)
-        {
-            int charValue;
-            char finalChar;
-            StringBuilder stringBuilder = new StringBuilder();
-
-            for (int i = 0; i < text.Length; i++)
-            {
-                charValue = (int)text[i];
-                charValue -= 1;
-                finalChar = (char)charValue;
-                stringBuilder.Append(finalChar);
-            }
-            Console.WriteLine(stringBuilder.ToString());
-            return stringBuilder.ToString();
-        }
-        
 
         public static string TurnStringOver(string input)
         {
@@ -175,8 +173,22 @@ namespace Czechitas3
             Console.WriteLine(text);
             return text;
         }
+        public static string CaesarCipher(string text)
+        {
+            int charValue;
+            char finalChar;
+            StringBuilder stringBuilder = new StringBuilder();
 
-
+            for (int i = 0; i < text.Length; i++)
+            {
+                charValue = (int)text[i];
+                charValue -= 1;
+                finalChar = (char)charValue;
+                stringBuilder.Append(finalChar);
+            }
+            Console.WriteLine(stringBuilder.ToString());
+            return stringBuilder.ToString();
+        }
     }
     
 }
