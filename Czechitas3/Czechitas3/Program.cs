@@ -120,6 +120,7 @@ namespace Czechitas3
 
             //string foodsWithStr = string.Join(';', foodDivided);
 
+            // String builder - lepsi, vypocetne neni tak narocny
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < 100; i++)
             {
