@@ -120,7 +120,19 @@ namespace Czechitas3
 
             //string foodsWithStr = string.Join(';', foodDivided);
 
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < 100; i++)
+            {
+                sb.Append(i);
+            }
+            Console.WriteLine(sb.ToString());
 
+            string souhrn ="";
+            for (int i = 0; i < 100; i++)
+            {
+                souhrn += i;
+            }
+            Console.WriteLine(sb.ToString());
 
 
             Console.ReadLine();
