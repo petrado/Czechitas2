@@ -11,6 +11,60 @@ namespace Czechitas4
     {
         static void Main(string[] args)
         {
+            // dictionary - <klic - int, string>...a to druhe je hodnota
+            Dictionary<string, string> slovnikAj = new Dictionary<string, string>
+            {
+                { "ahoj", "hello" },
+                { "auto", "car" },
+                { "dum", "house" }
+            };
+
+            slovnikAj.Add("kvetina", "flower");
+            Console.WriteLine($"kvetina je anglicky {slovnikAj["kvetina"]}");
+
+            foreach (KeyValuePair<string, string> zaznam in slovnikAj) // always returns two values
+            {
+                Console.WriteLine($"Obsah slovniku {zaznam.Key} : {zaznam.Value}");
+            }
+
+            foreach (var zaznam in slovnikAj) // can be written also like this
+            {
+                Console.WriteLine($"Obsah slovniku {zaznam.Key} : {zaznam.Value}");
+            }
+
+            var nazdar = "nazdar"; // doesn't have to be declared - C# hada datovy typ
+
+            //slovnikAj.Add("auto", "car"); //cannot add - key have to be unique
+
+            if (!slovnikAj.ContainsKey("auto")) // ContainsValue - vraci bool
+            {
+                slovnikAj.Add("auto", "car");
+            }
+            else
+            {
+                Console.WriteLine("already there");
+            }
+
+            // TryGetValue
+
+            string anglickyPreklad;
+
+            if (slovnikAj.TryGetValue("ahoj", out anglickyPreklad))
+            {
+                Console.Write($"anglicky preklad je {anglickyPreklad}");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
             Knight bonifac = new Knight("Bonifac", 2);
             Knight artush = new Knight("Artush", 3);
             Knight geralt = new Knight("Geralt", 1);
