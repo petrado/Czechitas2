@@ -11,6 +11,21 @@ namespace Czechitas4
     {
         static void Main(string[] args)
         {
+            /* Vytvorte tridu TelefonniSeznam
+- uvnitr ni budete ukladat dvojice Jmeno - Telefonni cislo
+- k tomu pouzijte Dictionary, jehoz klice budou stringy a hodnoty integery
+- v ramci konstruktoru vyplnte nekolik jmen a cisel
+- vytvorte metodu, ktera do slovniku ulozi noveho cloveka a jeho telefonni cislo
+- vytvorte metodu, ktera vrati telefonni cislo cloveka
+- vytvorte metodu, ktera vypise cely telefonni seznam
+- vytvorte metodu, ktera smaze daneho cloveka
+- vytvorte metodu, ktera smaze cely telefonni seznam .Clear()
+- myslete na mozne chybove stavy (co kdyz tam dany clovek neni, co kdyz pridavam cloveka, ktery uz tam je)
+- napiste kratky program, ktery overi funkcnost teto tridy */
+
+
+
+
             // dictionary - <klic - int, string>...a to druhe je hodnota
             Dictionary<string, string> slovnikAj = new Dictionary<string, string>
             {
@@ -53,17 +68,18 @@ namespace Czechitas4
             {
                 Console.Write($"anglicky preklad je {anglickyPreklad}");
             }
+            else 
+            {
+                Console.WriteLine("toto neni v zaznamu");
+            }
 
+            Console.WriteLine();
 
+            slovnikAj.Remove("ahoj");
+            slovnikAj["auto"] = "vehicle";
+            slovnikAj["most"] = "bridge";
 
-
-
-
-
-
-
-
-
+            slovnikAj.Clear();
 
             Knight bonifac = new Knight("Bonifac", 2);
             Knight artush = new Knight("Artush", 3);
