@@ -40,14 +40,15 @@ namespace Czechitas7_Obdelnik
             //Console.ForegroundColor = ConsoleColor.White;
             //Console.WriteLine("Bila");
 
-            Obdelnik obdelnik = new Obdelnik();
-            Trojuhelnik trojuhelnik = new Trojuhelnik();
-            Text text = new Text();
+            Obdelnik obdelnik = new Obdelnik(5, 8);
+            Trojuhelnik trojuhelnik = new Trojuhelnik(4, 5);
+            Text text = new Text("Neco");
 
             List<GrafickyObjekt> objekty = new List<GrafickyObjekt>();
             objekty.Add(obdelnik);
             objekty.Add(trojuhelnik);
             objekty.Add(text);
+
 
             foreach (var objekt in objekty)
             {
