@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Czechitas12", "Czechitas12\Czechitas12.csproj", "{571503CB-E97D-4846-97C1-378F2A009803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestySkladby", "TestySkladby\TestySkladby.csproj", "{B980E80B-78D8-4CCB-93B7-ECFCDC1ACA06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{571503CB-E97D-4846-97C1-378F2A009803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571503CB-E97D-4846-97C1-378F2A009803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571503CB-E97D-4846-97C1-378F2A009803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571503CB-E97D-4846-97C1-378F2A009803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B980E80B-78D8-4CCB-93B7-ECFCDC1ACA06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B980E80B-78D8-4CCB-93B7-ECFCDC1ACA06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B980E80B-78D8-4CCB-93B7-ECFCDC1ACA06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B980E80B-78D8-4CCB-93B7-ECFCDC1ACA06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
